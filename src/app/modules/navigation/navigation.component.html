@@ -1,0 +1,42 @@
+<mat-nav-list class="navigation-blog" fxLayout="row" *ngIf="!isSmallScreen">
+    <mat-list class="list-btn" fxLayout="column">
+        <a routerLink="all" routerLinkActive="active" [routerLinkActiveOptions]='{exact: true}' mat-stroked-button>All</a>
+        <a routerLink="new" routerLinkActive="active" mat-stroked-button>New</a>
+        <a routerLink="tier1" routerLinkActive="active" mat-stroked-button>Tier1</a>
+        <a routerLink="tier2" routerLinkActive="active" mat-stroked-button>Tier2</a>
+        <a mat-stroked-button>Tier3</a>
+    </mat-list>
+    <mat-list class="list-virsion" fxLayout="column" *ngIf="isDesctopScreen || isTabletScreen">
+        <p class="logo-nav"><span class="first-let">q</span>uarq</p>
+        <button mat-stroked-button>technical features</button>
+        <button mat-stroked-button>technical features</button>
+    </mat-list>
+    <router-outlet></router-outlet>
+</mat-nav-list>
+
+<mat-accordion *ngIf="isSmallScreen">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>All</mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-news></app-news>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>New</mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-new></app-new>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Tier1</mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-tier1></app-tier1>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Tier2</mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-tier2></app-tier2>
+    </mat-expansion-panel>
+</mat-accordion>

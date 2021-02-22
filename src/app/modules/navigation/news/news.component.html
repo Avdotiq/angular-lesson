@@ -1,0 +1,11 @@
+<section class="wrapped" fxLayout="row">
+    <div *ngFor="let item of data">
+        <h5 class="title">{{item.title}}</h5>
+        <div class="wrap-icons">
+            <span class="point">{{item.totalComment}}</span>
+            <span *ngIf="item.completed"><mat-icon class="icon-done">check_circle_outline</mat-icon></span>
+            <span class="red point">{{item.totalRead}}</span>
+        </div>
+        <p class="about">{{item.content}}<p>
+    </div>
+</section>

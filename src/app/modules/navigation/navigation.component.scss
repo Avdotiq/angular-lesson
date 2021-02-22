@@ -1,0 +1,60 @@
+@import '~src/custom-theme.scss';
+
+@media screen and (max-width: 1024px) {
+    .list-virsion {
+        position: absolute;
+        top: 320px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .list-virsion {
+        position: unset;
+    }
+
+    .navigation-blog {
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .navigation-blog {
+        min-height: 450px;
+    }
+}
+
+.navigation-blog {
+    height: fit-content;
+    padding: 0px;
+    background-color: $font-header;
+
+    .list-btn, .list-virsion {
+        padding: 5px 20px;
+
+        & > a, button {
+            margin: 5px 0;
+            width: 280px;
+        }
+
+        .active {
+            background-color: lightgrey;
+        }
+    }
+
+    .list-virsion {
+        text-align: center;
+
+        .logo-nav {
+            font-family: $logo;
+            font-size: 36px;
+            color: $secondary;
+            text-transform: uppercase;
+            margin: 30px 0;
+
+            .first-let {
+                font-size: 46px;
+            }
+        }
+    }
+}

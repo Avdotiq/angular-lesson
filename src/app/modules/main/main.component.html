@@ -1,0 +1,12 @@
+<header>
+    <div class="toolbar">
+      <a routerLink="" class="logo">sram</a>
+      <p class="title" *ngIf="!isSmallScreen">LATEST NEWS: <span class="italic">Welcome to STU Online</span></p>
+      <ul class="toolbar-nav">
+          <li><a routerLink="news/all" routerLinkActive="activeLink" [routerLinkActiveOptions]='{exact: true}'>news</a></li>
+          <li><a routerLink="rewords" routerLinkActive="activeLink">rewords</a></li>
+      </ul>
+    </div>
+    <div class="photo-user" *ngIf="!isSmallScreen"><mat-icon>person_add</mat-icon></div>
+  </header>
+  <router-outlet></router-outlet>
